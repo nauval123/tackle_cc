@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget{
    return MaterialApp(
      title: "tackel climate change",
      debugShowCheckedModeBanner: false,
-     home: Splash_screen(),
+     home: splash_screen(),
    );
   }
 
