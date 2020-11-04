@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:tackle_cc/splash_screen.dart';
 
+import 'login_page.dart';
+
 void main()=>runApp(MyApp());
 
 class MyApp extends StatelessWidget{
@@ -9,7 +11,10 @@ class MyApp extends StatelessWidget{
    return MaterialApp(
      title: "tackel climate change",
      debugShowCheckedModeBanner: false,
-     home: splash_screen(),
+     routes: {
+       '/login': (context) => Loginpage(),
+     },
+     home: splash_Screen(),
    );
   }
 
