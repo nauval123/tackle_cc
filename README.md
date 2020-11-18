@@ -16,7 +16,7 @@ maka user bisa langsung memilih login untuk masuk ke aplikasinya.
 Kelompok D:
 1. Nauval Achmad Yusufa : 182410103078
 2. Nur Afni Windy Auliya : 182410103036
-3. Muhammad Alfaridz Abimanyu : 182410103073
+3. Muhamad Alfaridz Abimanyu : 182410103073
 
 .
 # Progress 1
