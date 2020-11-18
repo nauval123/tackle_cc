@@ -37,7 +37,7 @@ class _HalamanSplashScreen extends State<splash_Screen>{
          mainAxisAlignment: MainAxisAlignment.center,
          
          children: <Widget>[
-           Image.asset("images/logo.png",height: 150,width: 400,),
+           Image.asset("images/iconApps.png",height: 150,width: 400,),
            Text("Tackle Climate Change",
               textAlign: TextAlign.center,
               style: TextStyle(
