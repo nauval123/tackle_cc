@@ -31,7 +31,7 @@ class _HalamanSplashScreen extends State<splash_Screen>{
   @override
   Widget build(BuildContext context) {
    return Scaffold(
-     backgroundColor: Colors.blueAccent[700],
+     backgroundColor: Colors.white,
      body: Center(
        child: Column(
          mainAxisAlignment: MainAxisAlignment.center,
@@ -42,7 +42,7 @@ class _HalamanSplashScreen extends State<splash_Screen>{
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 15,
-                color: Colors.white, 
+                color: Colors.green[400], 
               ),
             )
          ],

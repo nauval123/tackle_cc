@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tackle_cc/daftarMisi.dart';
 
-import 'detail_mission.dart';
-
+import 'component.dart';
 
 
 class HomePage extends StatefulWidget {
@@ -14,7 +13,7 @@ class _HomePageState extends State<HomePage> {
  int _selectedIndex = 0;
 static const TextStyle optionStyle = TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
 static  List<Object> _widgetOptions = <Object>[
-  //buat tampilan tiap halaman
+  //list objek buat tampilan tiap halaman
    misiygSelesai(),
   kategoriMisi(),
   Text(
@@ -67,7 +66,7 @@ class misiygSelesai extends StatefulWidget {
 }
 
 class _misiygSelesaiState extends State<misiygSelesai> {
-   //listview untuk tampilan misi
+   //listview untuk tampilan misi dihalaman home
   List <String> misiSelesai =['Menggunakan Botol pribadi', 'Membuang sampah ditempatnya 3x', 'Menanam Pohon'];
   @override
   Widget build(BuildContext context) {
@@ -78,48 +77,67 @@ class _misiygSelesaiState extends State<misiygSelesai> {
           title: Text('Misi Selesai'),
           leading: Container(),
         ),
-        body: ListView.builder(
-          padding: EdgeInsets.all(10.0),
-          itemCount: misiSelesai.length,
-          itemBuilder: (context, i) {
-            return Column(
-              children: <Widget>[
-              Container(
-                margin: EdgeInsets.all(8.0),
-                child: Center(
-                  child: cardDetail(misiSelesai[i])
+        body:Column(
+          children: <Widget>[
+            // SingleChildScrollView(
+            //   scrollDirection: Axis.horizontal,
+            //   child:Row(
+            //     children: <Widget>[
+            //        Container(
+            //         height:50,
+            //         child:Text('1'),
+            //       ),
+            //       Container(
+            //         height:30,
+            //         child:Text('1'),
+            //       ),
+            //     ],
+            //   ),
+            // ),
+            Container(
+              height: MediaQuery.of(context).size.height*0.4,
+              child:  SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child:Row(
+                  children: <Widget>[
+                    Container(
+                      height:50,
+                      width: 100,
+                      margin: EdgeInsets.all(30),
+                      child:Text('1'),
+                    ),
+                    Container(
+                      height:50,
+                      width: 100,
+                      margin: EdgeInsets.only(left: 300),
+                      child:Text('1'),
+                    ),
+                  ],
                 ),
+              ),
             ),
-              ],
-            ); 
-          },
-        ),
+            Container(
+              height: MediaQuery.of(context).size.height*0.4,
+              child: ListView.builder(
+                padding: EdgeInsets.all(10.0),
+                itemCount: misiSelesai.length,
+                itemBuilder: (context, i) {
+                  return Column(
+                    children: <Widget>[
+                    Container(
+                        margin: EdgeInsets.all(8.0),
+                        child: Center(
+                          child: cardDetail(misiSelesai[i])
+                        ),
+                      ),
+                    ],
+                  ); 
+                },
+              ),
+            ),
+          ],
+        )
       );
-  }
-
-  Widget cardDetail(title){
-    return Card(
-    margin: EdgeInsets.all(5),
-    elevation: 5,
-    child: ListTile(
-      leading: Icon(Icons.accessibility_new_rounded,color: Colors.green,),
-      title: Text(
-        title,
-        style: TextStyle(fontSize: 12,
-        fontWeight: FontWeight.bold),
-      ),
-      subtitle: Text('easy'),
-      trailing: Container(
-        child: FlatButton.icon( 
-          onPressed: (){
-            Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) =>detailmissionPage()));
-          }, 
-          icon: Icon(Icons.arrow_forward_ios_rounded,color: Colors.green,),
-           label: Text('detail',style: TextStyle(color: Colors.green),),
-      )
-      ),      
-    )
-    );
   }
 }
 

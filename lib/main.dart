@@ -5,6 +5,8 @@ import 'login_page.dart';
 
 void main()=>runApp(MyApp());
 
+//root widget
+//diarahkan pertama ke splash_scree
 class MyApp extends StatelessWidget{
   @override
   Widget build(BuildContext context) {

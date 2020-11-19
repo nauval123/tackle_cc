@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:tackle_cc/detail_mission.dart';
 import 'package:tackle_cc/home_page.dart';
-//formlogin
+//formlogin 
 class FormLogin extends StatelessWidget {
   const FormLogin({
     Key key,
@@ -140,5 +141,38 @@ class FormLogin extends StatelessWidget {
   }
 }
 
+//komponen cardDetail
+class cardDetail extends StatelessWidget {
+  String title;
 
+  cardDetail(String input){
+    this.title= input;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+    margin: EdgeInsets.all(5),
+    elevation: 5,
+    child: ListTile(
+      leading: Icon(Icons.accessibility_new_rounded,color: Colors.green,),
+      title: Text(
+        title,
+        style: TextStyle(fontSize: 12,
+        fontWeight: FontWeight.bold),
+      ),
+      subtitle: Text('easy'),
+      trailing: Container(
+        child: FlatButton.icon( 
+          onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder:(BuildContext context) =>detailmissionPage()));
+          }, 
+          icon: Icon(Icons.arrow_forward_ios_rounded,color: Colors.green,),
+           label: Text('detail',style: TextStyle(color: Colors.green),),
+      )
+      ),      
+    )
+    );
+  }
+}
 

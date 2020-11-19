@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+//tampilan tab misi di navbar
 class kategoriMisi extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
