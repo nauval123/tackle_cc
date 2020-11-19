@@ -20,5 +20,4 @@ Kelompok D:
 
 .
 # Progress 1
-Pembuatan HomePage dan Halaman login. 
-dan Pembuatan controller yang digunakan untuk menghubungkan setiap pagenya
+Pembuatan HomePage dan Halaman login serta navbar
