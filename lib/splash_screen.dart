@@ -1,15 +1,14 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:tackle_cc/login_page.dart';
 
-class splash_Screen extends StatefulWidget{
+class SplashScreen extends StatefulWidget{
   @override
   _HalamanSplashScreen createState()=> _HalamanSplashScreen();
   
 }
 
-class _HalamanSplashScreen extends State<splash_Screen>{
+class _HalamanSplashScreen extends State<SplashScreen>{
 
   @override
   void initState(){

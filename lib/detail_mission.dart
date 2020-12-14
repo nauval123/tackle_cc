@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 
 //untuk tampilan detail misi dengan widget card
-class detailmissionPage extends StatelessWidget {
+class DetailmissionPage extends StatelessWidget {
    final String jeneng= 'Beli Botol Minum Tidak Sekali Pakai';
    final String ttl='Easy';
    final String bio= 'Indonesia adalah penyumbang sampah plastik kedua terbanyak didunia! Kebanyakan plastik dipakai hanya beberapa kali saja, kemudian dibuang begitu saja ke TPA atau diolah dengan cara didaur ulang atau dibakar dengan insinerator.Daur ulang memang memiliki dampak lingkungan yang paling minim, namun tidak semua plastik dapat di daur ulang, terlebih plastik dengan kualitas yang rendah. Daur ulang plastik juga memerlukan energi yang besar, sehingga menghasilkan emisi karbon yang cukup tinggi.';

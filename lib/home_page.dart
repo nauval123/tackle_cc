@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tackle_cc/daftarMisi.dart';
+import 'package:tackle_cc/profil.dart';
 
 import 'component.dart';
 
@@ -11,15 +12,12 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
  int _selectedIndex = 0;
-static const TextStyle optionStyle = TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
+// static const TextStyle optionStyle = TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
 static  List<Object> _widgetOptions = <Object>[
   //list objek buat tampilan tiap halaman
-   misiygSelesai(),
-  kategoriMisi(),
-  Text(
-     'Profil dan tentang aplikasi',
-     style: optionStyle,
-  ),
+   MisiygSelesai(),
+  KategoriMisi(),
+  ProfilPage(),
 ];
 
 void _onItemTapped(int index) {
@@ -60,66 +58,150 @@ Widget build(BuildContext context) {
 }
 
 
-class misiygSelesai extends StatefulWidget {
+class MisiygSelesai extends StatefulWidget {
   @override
-  _misiygSelesaiState createState() => _misiygSelesaiState();
+  _MisiygSelesaiState createState() => _MisiygSelesaiState();
 }
 
-class _misiygSelesaiState extends State<misiygSelesai> {
+class _MisiygSelesaiState extends State<MisiygSelesai> {
    //listview untuk tampilan misi dihalaman home
   List <String> misiSelesai =['Menggunakan Botol pribadi', 'Membuang sampah ditempatnya 3x', 'Menanam Pohon'];
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.green[400],
-          centerTitle: true,
-          title: Text('Misi Selesai'),
-          leading: Container(),
-        ),
+        // appBar: AppBar(
+        //   backgroundColor: Colors.green[400],
+        //   centerTitle: true,
+        //   title: Text('Misi Selesai'),
+        //   leading: Container(),
+        // ),
         body:Column(
           children: <Widget>[
-            // SingleChildScrollView(
-            //   scrollDirection: Axis.horizontal,
-            //   child:Row(
-            //     children: <Widget>[
-            //        Container(
-            //         height:50,
-            //         child:Text('1'),
-            //       ),
-            //       Container(
-            //         height:30,
-            //         child:Text('1'),
-            //       ),
-            //     ],
+            // Container(
+            //   height: MediaQuery.of(context).size.height*0.4,
+            //   child:  SingleChildScrollView(
+            //     scrollDirection: Axis.horizontal,
+            //     child:Row(
+            //       children: <Widget>[
+            //         Container(
+            //           height:50,
+            //           width: 100,
+            //           margin: EdgeInsets.all(30),
+            //           child:Text('1'),
+            //         ),
+            //         Container(
+            //           height:50,
+            //           width: 100,
+            //           margin: EdgeInsets.only(left: 300),
+            //           child:Text('1'),
+            //         ),
+            //       ],
+            //     ),
             //   ),
             // ),
             Container(
-              height: MediaQuery.of(context).size.height*0.4,
-              child:  SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child:Row(
-                  children: <Widget>[
-                    Container(
-                      height:50,
-                      width: 100,
-                      margin: EdgeInsets.all(30),
-                      child:Text('1'),
-                    ),
-                    Container(
-                      height:50,
-                      width: 100,
-                      margin: EdgeInsets.only(left: 300),
-                      child:Text('1'),
-                    ),
-                  ],
-                ),
+              height: MediaQuery.of(context).size.height/3,
+              padding: EdgeInsets.only(top:50),
+              decoration: BoxDecoration(
+                gradient: LinearGradient(colors: <Color>[
+                  Colors.green[300],
+                  Colors.green[500],
+                ]), ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget> [
+                   Text(
+                        'Halo X ',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 30,
+                          fontWeight: FontWeight.bold,
+                        ),
+                        ),
+                         Container(
+                          height: 5,
+                        ),
+                        Text(
+                        'Lawan Perubahan Iklim!',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 15,
+                        ),
+                        ),
+                        Container(
+                          height: 30,
+                        ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: <Widget>[
+                      Container(
+                        padding: EdgeInsets.all(20),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(10)),
+                          color: Colors.green[500],
+                        ),
+                        child:Column(
+                          children: <Widget> [
+                             Text(
+                        'Misi Selesai',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                        ),
+                        ),
+                        Container(
+                          width: MediaQuery.of(context).size.width/6,
+                        ),
+                     Text('100',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                      ),
+                      )
+                          ]
+                        )
+                      ),
+                      Container(
+                         padding: EdgeInsets.all(20),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(10)),
+                          color: Colors.green[600],
+                        ),
+                        child:Column(
+                          children: <Widget> [
+                             Text(
+                        'Tersisa',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                        ),
+                        ),
+                        Container(
+                          width: MediaQuery.of(context).size.width/6,
+                        ),
+                      Text('100',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                      ),
+                      )
+                          ]
+                        )
+                      )
+                    ],
+                  ),
+                  Container(
+                    height: 10,
+                  ),
+                ],
               ),
             ),
             Container(
-              height: MediaQuery.of(context).size.height*0.4,
+              height: MediaQuery.of(context).size.height*0.575,
               child: ListView.builder(
-                padding: EdgeInsets.all(10.0),
+                padding: EdgeInsets.all(20.0),
                 itemCount: misiSelesai.length,
                 itemBuilder: (context, i) {
                   return Column(
@@ -127,7 +209,7 @@ class _misiygSelesaiState extends State<misiygSelesai> {
                     Container(
                         margin: EdgeInsets.all(8.0),
                         child: Center(
-                          child: cardDetail(misiSelesai[i])
+                          child: CardDetail(misiSelesai[i])
                         ),
                       ),
                     ],

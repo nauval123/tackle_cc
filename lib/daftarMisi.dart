@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 //tampilan tab misi di navbar
-class kategoriMisi extends StatelessWidget {
+class KategoriMisi extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold( 
@@ -11,44 +11,133 @@ class kategoriMisi extends StatelessWidget {
          centerTitle: true,
          leading: Container(),
        ),
-       body:Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          crossAxisAlignment: CrossAxisAlignment.center,
+       body:ListView(
+          // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          // crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             Container(
-              decoration: BoxDecoration(
-                // gradient: 
+              height: MediaQuery.of(context).size.height/2,
+              width: MediaQuery.of(context).size.width,
+              decoration: new BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: Colors.green[200],
+                image: DecorationImage(
+                  fit: BoxFit.cover,
+                  colorFilter: new ColorFilter.mode(Colors.black.withOpacity(0.2), BlendMode.dstATop),
+                  image: AssetImage('images/easy.jpg') 
+                ),
               ),
               margin: EdgeInsets.all(10),
-              child: ListTile(
-                title: Text('test1'),
-              ),         
-            ),
+                child: InkWell(
+                  borderRadius: BorderRadius.circular(10),
+                  child: Column(
+                    children: <Widget>[
+                      Container(
+                        height: 100,
+                      ),
+                      Text(
+                        'mudah',
+                        style: TextStyle(
+                          fontSize: 30,
+                          color: Colors.white,
+                        ),
+                      ),
+                      Text(
+                        'deskripsi',
+                         style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
             Container(
+              height: MediaQuery.of(context).size.height/2,
+              width: MediaQuery.of(context).size.width,
+              decoration: new BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: Colors.green[200],
+                image: DecorationImage(
+                  fit: BoxFit.cover,
+                  colorFilter: new ColorFilter.mode(Colors.black.withOpacity(0.2), BlendMode.dstATop),
+                  image: AssetImage('images/medium.jpg') 
+                ),
+              ),
               margin: EdgeInsets.all(10),
-              child: ListTile(
-                title: Text('test2'),
-              ),         
-            ),
+                child: InkWell(
+                  borderRadius: BorderRadius.circular(10),
+                  child: Column(
+                    children: <Widget>[
+                      Container(
+                        height: 100,
+                      ),
+                      Text(
+                        'Sedang',
+                        style: TextStyle(
+                          fontSize: 30,
+                          color: Colors.white,
+                        ),
+                      ),
+                      Text(
+                        'deskripsi',
+                         style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
             Container(
+              height: MediaQuery.of(context).size.height/2,
+              width: MediaQuery.of(context).size.width,
+              decoration: new BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: Colors.green[200],
+                image: DecorationImage(
+                  fit: BoxFit.cover,
+                  colorFilter: new ColorFilter.mode(Colors.black.withOpacity(0.2), BlendMode.dstATop),
+                  image: AssetImage('images/hard.jpg') 
+                ),
+              ),
               margin: EdgeInsets.all(10),
-              child: ListTile(
-                title: Text('test3'),
-              ),         
-            ),
-
+                child: InkWell(
+                  borderRadius: BorderRadius.circular(10),
+                  child: Column(
+                    children: <Widget>[
+                      Container(
+                        height: 100,
+                      ),
+                      Text(
+                        'Sulit',
+                        style: TextStyle(
+                          fontSize: 30,
+                          color: Colors.white,
+                        ),
+                      ),
+                      Text(
+                        'deskripsi',
+                         style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
           ],
       )
     );
   }
 }
 
-class daftarMisi extends StatefulWidget {
+class DaftarMisi extends StatefulWidget {
   @override
-  _daftarMisiState createState() => _daftarMisiState();
+  _DaftarMisiState createState() => _DaftarMisiState();
 }
 
-class _daftarMisiState extends State<daftarMisi> {
+class _DaftarMisiState extends State<DaftarMisi> {
    
   List <String> misiSelesai =['Menggunakan Botol pribadi', 'Membuang sampah ditempatnya 3x', 'Menanam Pohon'];
   @override
