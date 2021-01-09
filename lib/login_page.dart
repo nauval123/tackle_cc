@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tackle_cc/home_page.dart';
+import 'package:tackle_cc/register_page.dart';
 
 class Loginpage extends StatelessWidget{
   @override
@@ -12,9 +13,9 @@ class Loginpage extends StatelessWidget{
 }
 
 class FormLogin extends StatelessWidget {
-  const FormLogin({
-    Key key,
-  }) : super(key: key);
+  // const FormLogin({
+  //   Key key,
+  // }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -60,6 +61,7 @@ class FormLogin extends StatelessWidget {
                               ),
                             ),
                             TextField(
+                              obscureText: true,
                               decoration: InputDecoration(
                                 suffixIcon: Icon(
                                   Icons.security,
@@ -133,7 +135,7 @@ class FormLogin extends StatelessWidget {
                                           ),
                                         ),
                                         onTap: (){
-                                          
+                                          Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => Registerpage()));
                                         },
                                     )
                                   ),
