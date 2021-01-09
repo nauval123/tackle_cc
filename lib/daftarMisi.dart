@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
+
 //tampilan tab misi di navbar
 class KategoriMisi extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold( 
@@ -11,6 +13,7 @@ class KategoriMisi extends StatelessWidget {
          centerTitle: true,
          leading: Container(),
        ),
+
        body:ListView(
           // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           // crossAxisAlignment: CrossAxisAlignment.center,
@@ -132,12 +135,14 @@ class KategoriMisi extends StatelessWidget {
   }
 }
 
+
 class DaftarMisi extends StatefulWidget {
   @override
   _DaftarMisiState createState() => _DaftarMisiState();
 }
 
 class _DaftarMisiState extends State<DaftarMisi> {
+
    
   List <String> misiSelesai =['Menggunakan Botol pribadi', 'Membuang sampah ditempatnya 3x', 'Menanam Pohon'];
   @override
