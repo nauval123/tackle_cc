@@ -8,7 +8,7 @@ Deskripsi Fitur:
 user harus melakukan apa untuk menghadapi perubahan iklim atau adaptasi musim 
 kedepanya dan juga bagaimana cara menjaga bumi.dan levelnya mungkin bisa dibuat 
 menjadi 3 tingkatan yakni easy, medium, hard.
-2. Pada pilihan misinya ada beberapa kategori misi, mulai dari kategori misi listrik, 
+2. Pada masing masing tingakatan misi itu ada beberapa kategori misi, mulai dari kategori misi listrik, 
 kendaraan, makanan, bahan bakar dan minyak. dan pencapaian yang didapat ini akan di rangkingkan
 secara global atau regional. 
 3. Untuk melakukan atau mengambil misi user diharuskan mendaftarkan diri, jika sudah memilki akun 
