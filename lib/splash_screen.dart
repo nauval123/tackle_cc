@@ -1,15 +1,14 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:tackle_cc/login_page.dart';
 
-class splash_Screen extends StatefulWidget{
+class SplashScreen extends StatefulWidget{
   @override
   _HalamanSplashScreen createState()=> _HalamanSplashScreen();
   
 }
 
-class _HalamanSplashScreen extends State<splash_Screen>{
+class _HalamanSplashScreen extends State<SplashScreen>{
 
   @override
   void initState(){
@@ -31,18 +30,18 @@ class _HalamanSplashScreen extends State<splash_Screen>{
   @override
   Widget build(BuildContext context) {
    return Scaffold(
-     backgroundColor: Colors.blueAccent[700],
+     backgroundColor: Colors.white,
      body: Center(
        child: Column(
          mainAxisAlignment: MainAxisAlignment.center,
          
          children: <Widget>[
-           Image.asset("images/logo.png",height: 150,width: 400,),
+           Image.asset("images/iconApps.png",height: 150,width: 400,),
            Text("Tackle Climate Change",
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 15,
-                color: Colors.white, 
+                color: Colors.green[400], 
               ),
             )
          ],

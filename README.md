@@ -3,6 +3,7 @@
 SDGS ke 13
 Deskripsi Fitur:
 
+
 1. Aplikasi ini berisi tentang kegiatan anjuran sehari hari berupa pilihan misi-misi. dan misinya ini berisi info untuk 
 user harus melakukan apa untuk menghadapi perubahan iklim atau adaptasi musim 
 kedepanya dan juga bagaimana cara menjaga bumi.dan levelnya mungkin bisa dibuat 
@@ -11,6 +12,7 @@ menjadi 3 tingkatan yakni easy, medium, hard.
 kendaraan, makanan, bahan bakar dan minyak. dan pencapaian yang didapat ini akan di rangkingkan
 secara global atau regional. 
 3. Untuk melakukan atau mengambil misi user diharuskan mendaftarkan diri, jika sudah memilki akun 
+
 maka user bisa langsung memilih login untuk masuk ke aplikasinya.
 
 Nama Anggota Kelompok D:
@@ -21,6 +23,7 @@ Nama Anggota Kelompok D:
 .
 # Progress 1
 Pembuatan HomePage dan Halaman login serta navbar
+
 .
 
 # Progress 2
@@ -29,3 +32,4 @@ dan Pembuatan controller yang digunakan untuk menghubungkan setiap pagenya
 
 # Progress 3
 Pembuatan daftar misi dan detail misi
+
