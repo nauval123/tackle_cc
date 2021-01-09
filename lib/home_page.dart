@@ -69,36 +69,9 @@ class _MisiygSelesaiState extends State<MisiygSelesai> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-        // appBar: AppBar(
-        //   backgroundColor: Colors.green[400],
-        //   centerTitle: true,
-        //   title: Text('Misi Selesai'),
-        //   leading: Container(),
-        // ),
         body:Column(
           children: <Widget>[
-            // Container(
-            //   height: MediaQuery.of(context).size.height*0.4,
-            //   child:  SingleChildScrollView(
-            //     scrollDirection: Axis.horizontal,
-            //     child:Row(
-            //       children: <Widget>[
-            //         Container(
-            //           height:50,
-            //           width: 100,
-            //           margin: EdgeInsets.all(30),
-            //           child:Text('1'),
-            //         ),
-            //         Container(
-            //           height:50,
-            //           width: 100,
-            //           margin: EdgeInsets.only(left: 300),
-            //           child:Text('1'),
-            //         ),
-            //       ],
-            //     ),
-            //   ),
-            // ),
+
             Container(
               height: MediaQuery.of(context).size.height/3,
               padding: EdgeInsets.only(top:50),

@@ -1,4 +1,4 @@
-#Fri Jan 08 22:47:23 ICT 2021
+#Sat Jan 09 12:52:14 ICT 2021
 base.0=G\:\\belajar dart\\tackle_cc\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

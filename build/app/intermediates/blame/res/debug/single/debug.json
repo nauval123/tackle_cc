@@ -40,6 +40,10 @@
         "source": "G:\\belajar dart\\tackle_cc\\android\\app\\src\\main\\res\\drawable-mdpi\\ic_launcher_background.png"
     },
     {
+        "merged": "G:\\belajar dart\\tackle_cc\\build\\app\\intermediates\\res\\merged\\debug\\xml_flutter_image_picker_file_paths.xml.flat",
+        "source": "G:\\belajar dart\\tackle_cc\\build\\image_picker\\intermediates\\packaged_res\\debug\\xml\\flutter_image_picker_file_paths.xml"
+    },
+    {
         "merged": "G:\\belajar dart\\tackle_cc\\build\\app\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_launcher_foreground.png.flat",
         "source": "G:\\belajar dart\\tackle_cc\\android\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_launcher_foreground.png"
     },
@@ -116,12 +120,12 @@
         "source": "C:\\Users\\nauval achmad yusufa\\.gradle\\caches\\transforms-2\\files-2.1\\a528b13ac93e64cafa3d0480e2c93207\\core-1.1.0\\res\\layout\\custom_dialog.xml"
     },
     {
-        "merged": "G:\\belajar dart\\tackle_cc\\build\\app\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_notification_bg_low_normal.9.png.flat",
-        "source": "C:\\Users\\nauval achmad yusufa\\.gradle\\caches\\transforms-2\\files-2.1\\a528b13ac93e64cafa3d0480e2c93207\\core-1.1.0\\res\\drawable-mdpi-v4\\notification_bg_low_normal.9.png"
-    },
-    {
         "merged": "G:\\belajar dart\\tackle_cc\\build\\app\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_launcher_foreground.png.flat",
         "source": "G:\\belajar dart\\tackle_cc\\android\\app\\src\\main\\res\\drawable-xxhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "G:\\belajar dart\\tackle_cc\\build\\app\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_notification_bg_low_normal.9.png.flat",
+        "source": "C:\\Users\\nauval achmad yusufa\\.gradle\\caches\\transforms-2\\files-2.1\\a528b13ac93e64cafa3d0480e2c93207\\core-1.1.0\\res\\drawable-mdpi-v4\\notification_bg_low_normal.9.png"
     },
     {
         "merged": "G:\\belajar dart\\tackle_cc\\build\\app\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_notification_bg_normal_pressed.9.png.flat",
@@ -168,24 +172,24 @@
         "source": "C:\\Users\\nauval achmad yusufa\\.gradle\\caches\\transforms-2\\files-2.1\\a528b13ac93e64cafa3d0480e2c93207\\core-1.1.0\\res\\drawable-xhdpi-v4\\notification_bg_low_pressed.9.png"
     },
     {
-        "merged": "G:\\belajar dart\\tackle_cc\\build\\app\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_notification_bg_normal.9.png.flat",
-        "source": "C:\\Users\\nauval achmad yusufa\\.gradle\\caches\\transforms-2\\files-2.1\\a528b13ac93e64cafa3d0480e2c93207\\core-1.1.0\\res\\drawable-mdpi-v4\\notification_bg_normal.9.png"
-    },
-    {
         "merged": "G:\\belajar dart\\tackle_cc\\build\\app\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_launcher_background.png.flat",
         "source": "G:\\belajar dart\\tackle_cc\\android\\app\\src\\main\\res\\drawable-hdpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "G:\\belajar dart\\tackle_cc\\build\\app\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_notification_bg_normal.9.png.flat",
+        "source": "C:\\Users\\nauval achmad yusufa\\.gradle\\caches\\transforms-2\\files-2.1\\a528b13ac93e64cafa3d0480e2c93207\\core-1.1.0\\res\\drawable-mdpi-v4\\notification_bg_normal.9.png"
     },
     {
         "merged": "G:\\belajar dart\\tackle_cc\\build\\app\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
         "source": "G:\\belajar dart\\tackle_cc\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "G:\\belajar dart\\tackle_cc\\build\\app\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_launcher_icon.png.flat",
-        "source": "G:\\belajar dart\\tackle_cc\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\launcher_icon.png"
-    },
-    {
         "merged": "G:\\belajar dart\\tackle_cc\\build\\app\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_launcher_foreground.png.flat",
         "source": "G:\\belajar dart\\tackle_cc\\android\\app\\src\\main\\res\\drawable-mdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "G:\\belajar dart\\tackle_cc\\build\\app\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_launcher_icon.png.flat",
+        "source": "G:\\belajar dart\\tackle_cc\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\launcher_icon.png"
     },
     {
         "merged": "G:\\belajar dart\\tackle_cc\\build\\app\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
