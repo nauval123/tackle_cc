@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:tackle_cc/login_page.dart';
-
+//halaman splasshcreen di awal
 class SplashScreen extends StatefulWidget{
   @override
   _HalamanSplashScreen createState()=> _HalamanSplashScreen();
@@ -15,7 +15,7 @@ class _HalamanSplashScreen extends State<SplashScreen>{
     super.initState();
     jalaninSplashScreen();
   }
-
+//fungsi asyncr untuk memberikan waktu dellay sebelum diarahkan ke halam login
   jalaninSplashScreen() async{
     var duration = const Duration(seconds: 3);
     return Timer(duration, (){
@@ -26,7 +26,7 @@ class _HalamanSplashScreen extends State<SplashScreen>{
       );
     });
   }
-
+//tampilan ditampung di widget scaffold
   @override
   Widget build(BuildContext context) {
    return Scaffold(

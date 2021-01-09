@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tackle_cc/home_page.dart';
 import 'package:tackle_cc/register_page.dart';
-
+//tampilan halaman login,ditampung dalam singlechildscrollview
 class Loginpage extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
@@ -13,21 +13,12 @@ class Loginpage extends StatelessWidget{
 }
 
 class FormLogin extends StatelessWidget {
-  // const FormLogin({
-  //   Key key,
-  // }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Column(
         children: <Widget>[
-          // Container(
-          //   margin: EdgeInsets.only(top:10),
-          //   height: MediaQuery.of(context).size.height/2,
-          //   width: MediaQuery.of(context).size.width,
-          //   child: Image.asset('images/login.png')
-          // ),
           Container(
             margin: EdgeInsets.all(30),
             child: Column(

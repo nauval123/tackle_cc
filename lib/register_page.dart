@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tackle_cc/home_page.dart';
 import 'package:tackle_cc/login_page.dart';
-
+//halaman register menggunakan stateless
 class Registerpage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -11,19 +11,13 @@ class Registerpage extends StatelessWidget {
   );
   }
 }
-
+//ditampung di widget singlechildscrollview
 class FormRegister extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Column(
         children: <Widget>[
-          // Container(
-          //   margin: EdgeInsets.only(top:10),
-          //   height: MediaQuery.of(context).size.height/2,
-          //   width: MediaQuery.of(context).size.width,
-          //   child: Image.asset('images/login.png')
-          // ),
           Container(
             margin: EdgeInsets.all(30),
             child: Column(

@@ -2,6 +2,9 @@ import 'dart:io';
 import 'package:image_picker/image_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:tackle_cc/update_profil.dart';
+
+
+// halaman profil menggunakan statefullwidget
 class ProfilPage extends StatefulWidget {
   @override
   _ProfilPageState createState() => _ProfilPageState();
@@ -9,8 +12,8 @@ class ProfilPage extends StatefulWidget {
 
 class _ProfilPageState extends State<ProfilPage> {
    File _image;
-
-  _imgFromCamera() async {
+// fungsi untuk mengakses kamera dan menyimpannya
+  _dariKamera() async {
   // ignore: deprecated_member_use
   File image = await ImagePicker.pickImage(
     source: ImageSource.camera, imageQuality: 50
@@ -20,8 +23,8 @@ class _ProfilPageState extends State<ProfilPage> {
     _image = image;
   });
 }
-
-_imgFromGallery() async {
+// fungsi untuk mengakses galeri
+_dariGaleri() async {
   // ignore: deprecated_member_use
   File image = await  ImagePicker.pickImage(
       source: ImageSource.gallery, imageQuality: 50
@@ -31,7 +34,7 @@ _imgFromGallery() async {
     _image = image;
   });
 }
-
+//fungsi untuk menampilkan pilihan pengambilan foto
 void _showPicker(context) {
   showModalBottomSheet(
       context: context,
@@ -44,14 +47,14 @@ void _showPicker(context) {
                     leading: new Icon(Icons.photo_library),
                     title: new Text('Photo Library'),
                     onTap: () {
-                      _imgFromGallery();
+                      _dariGaleri();
                       Navigator.of(context).pop();
                     }),
                 new ListTile(
                   leading: new Icon(Icons.photo_camera),
                   title: new Text('Camera'),
                   onTap: () {
-                    _imgFromCamera();
+                    _dariKamera();
                     Navigator.of(context).pop();
                   },
                 ),
@@ -63,9 +66,6 @@ void _showPicker(context) {
     );
 }
 
-
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -75,7 +75,6 @@ void _showPicker(context) {
          centerTitle: true,
          leading: InkWell(child:Icon(Icons.login_sharp,)),
          actions: [InkWell(child: Icon(Icons.info_outline_rounded),),Container(width:15)],
-
        ),
       body: SingleChildScrollView(
         child: Column(
