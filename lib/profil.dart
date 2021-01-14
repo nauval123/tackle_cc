@@ -3,7 +3,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:tackle_cc/login_page.dart';
 import 'package:tackle_cc/update_profil.dart';
-
+import 'package:shared_preferences/shared_preferences.dart';
 
 
 // halaman profil menggunakan statefullwidget
@@ -14,6 +14,13 @@ class ProfilPage extends StatefulWidget {
 
 class _ProfilPageState extends State<ProfilPage> {
    File _image;
+
+  Future<Null> logout() async {
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
+    prefs.setBool('statuslogin', false);
+  }
+
+
 // fungsi untuk mengakses kamera dan menyimpannya
   _dariKamera() async {
   // ignore: deprecated_member_use
@@ -75,7 +82,7 @@ void _showPicker(context) {
          title:Text('Profil'),
          backgroundColor: Colors.green[400],
          centerTitle: true,
-         leading: RaisedButton( color: Colors.green[300],onPressed: () {  Navigator.pushReplacement(context, MaterialPageRoute(builder: (BuildContext context) => Loginpage())); },
+         leading: RaisedButton( color: Colors.green[300],onPressed: () {logout();  Navigator.pushReplacement(context, MaterialPageRoute(builder: (BuildContext context) => Loginpage())); },
          child:Icon(Icons.logout,color: Colors.red,)),
           ),
       body: SingleChildScrollView(

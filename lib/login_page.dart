@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tackle_cc/home_page.dart';
 import 'package:tackle_cc/register_page.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 //tampilan halaman login,ditampung dalam singlechildscrollview
 class Loginpage extends StatelessWidget{
   @override
@@ -17,6 +18,13 @@ class FormLogin extends StatefulWidget {
 }
 
 class _FormLoginState extends State<FormLogin> {
+
+  Future<Null> loginUser() async {
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
+    prefs.setBool('statuslogin', true);
+  }
+
+
    @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -77,6 +85,7 @@ class _FormLoginState extends State<FormLogin> {
                                           alignment: Alignment.bottomRight,
                                           child: RaisedButton(
                                             onPressed: (){
+                                              loginUser();
                                                 Navigator.pushReplacement(context, MaterialPageRoute(builder: (BuildContext context) => HomePage()));
                                             },
                                             shape: RoundedRectangleBorder(

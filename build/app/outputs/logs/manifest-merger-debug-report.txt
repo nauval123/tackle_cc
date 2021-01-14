@@ -5,6 +5,7 @@ INJECTED from G:\belajar dart\tackle_cc\android\app\src\main\AndroidManifest.xml
 INJECTED from G:\belajar dart\tackle_cc\android\app\src\main\AndroidManifest.xml:1:1-51:12
 INJECTED from G:\belajar dart\tackle_cc\android\app\src\main\AndroidManifest.xml:1:1-51:12
 MERGED from G:\belajar dart\tackle_cc\android\app\src\main\AndroidManifest.xml:1:1-51:12
+MERGED from [:shared_preferences] G:\belajar dart\tackle_cc\build\shared_preferences\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:image_picker] G:\belajar dart\tackle_cc\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-22:12
 MERGED from [:flutter_plugin_android_lifecycle] G:\belajar dart\tackle_cc\build\flutter_plugin_android_lifecycle\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:path_provider] G:\belajar dart\tackle_cc\build\path_provider\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
@@ -121,6 +122,8 @@ uses-sdk
 INJECTED from G:\belajar dart\tackle_cc\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from G:\belajar dart\tackle_cc\android\app\src\main\AndroidManifest.xml
 INJECTED from G:\belajar dart\tackle_cc\android\app\src\main\AndroidManifest.xml
+MERGED from [:shared_preferences] G:\belajar dart\tackle_cc\build\shared_preferences\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:shared_preferences] G:\belajar dart\tackle_cc\build\shared_preferences\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:image_picker] G:\belajar dart\tackle_cc\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:image_picker] G:\belajar dart\tackle_cc\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:flutter_plugin_android_lifecycle] G:\belajar dart\tackle_cc\build\flutter_plugin_android_lifecycle\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
