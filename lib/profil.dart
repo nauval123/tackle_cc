@@ -1,7 +1,9 @@
 import 'dart:io';
 import 'package:image_picker/image_picker.dart';
 import 'package:flutter/material.dart';
+import 'package:tackle_cc/login_page.dart';
 import 'package:tackle_cc/update_profil.dart';
+
 
 
 // halaman profil menggunakan statefullwidget
@@ -34,7 +36,7 @@ _dariGaleri() async {
     _image = image;
   });
 }
-//fungsi untuk menampilkan pilihan pengambilan foto
+//fungsi untuk menampilkan pilihan pengambilan foto dari kamera / galeri
 void _showPicker(context) {
   showModalBottomSheet(
       context: context,
@@ -65,7 +67,7 @@ void _showPicker(context) {
       }
     );
 }
-
+// tampilan profil dengan widget 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -73,15 +75,15 @@ void _showPicker(context) {
          title:Text('Profil'),
          backgroundColor: Colors.green[400],
          centerTitle: true,
-         leading: InkWell(child:Icon(Icons.login_sharp,)),
-         actions: [InkWell(child: Icon(Icons.info_outline_rounded),),Container(width:15)],
-       ),
+         leading: RaisedButton( color: Colors.green[300],onPressed: () {  Navigator.pushReplacement(context, MaterialPageRoute(builder: (BuildContext context) => Loginpage())); },
+         child:Icon(Icons.logout,color: Colors.red,)),
+          ),
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
             Container(
-              height: MediaQuery.of(context).size.height/2,
-              padding: EdgeInsets.only(top:50),
+              height: MediaQuery.of(context).size.height/1.1,
+              padding: EdgeInsets.only(top:10),
               decoration: BoxDecoration(
                 gradient: LinearGradient(colors: <Color>[
                   Colors.green[300],
@@ -126,7 +128,7 @@ void _showPicker(context) {
                     height: 20,
                   ),
                        Text(
-                        'Rizki Aha',
+                        'tes',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 30,
@@ -137,7 +139,7 @@ void _showPicker(context) {
                           height: 5,
                         ),
                         Text(
-                        'rizkiseg@gmail.com',
+                        'tes',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 15,
@@ -182,16 +184,14 @@ void _showPicker(context) {
                         onTap: (){
                           Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => UbahprofilPage()));
                         },
-                        child: Text('Ubah Profil',
-                        style: TextStyle(color: Colors.white,fontSize: 15),),
+                        child: Container(
+                          child:Text('Ubah Profil',
+                        style: TextStyle(color: Colors.white,fontSize: 20,letterSpacing: 2.0),),
+                        )
                       )
                 ],
               ),
             ),
-            Container(
-              height:MediaQuery.of(context).size.height/2,
-              // color: Colors.black,
-            )
           ],
         ),
       ),

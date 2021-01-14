@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:tackle_cc/home_page.dart';
-import 'package:tackle_cc/login_page.dart';
 //halaman register menggunakan stateless
 class Registerpage extends StatelessWidget {
   @override
@@ -140,7 +139,7 @@ class FormRegister extends StatelessWidget {
                                           alignment: Alignment.bottomRight,
                                           child: RaisedButton(
                                             onPressed: (){
-                                                Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => Loginpage()));
+                                               Navigator.of(context).pop();
                                             },
                                             shape: RoundedRectangleBorder(
                                               borderRadius:BorderRadius.circular(80),

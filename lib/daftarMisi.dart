@@ -112,7 +112,7 @@ class KategoriMisi extends StatelessWidget {
                 child: InkWell(
                   borderRadius: BorderRadius.circular(10),
                    onTap: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => ListmisiPage(tingkat: "Hard",)));
+                      Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => ListmisiPage(tingkat: "hard",)));
                     },
                   child: Column(
                     children: <Widget>[

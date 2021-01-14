@@ -1,7 +1,5 @@
-
-import 'dart:io';
-import 'package:image_picker/image_picker.dart';
 import 'package:flutter/material.dart';
+import 'package:tackle_cc/profil.dart';
 
 class UbahprofilPage extends StatefulWidget {
   @override
@@ -9,104 +7,128 @@ class UbahprofilPage extends StatefulWidget {
 }
 
 class _UbahprofilPageState extends State<UbahprofilPage> {
-   File _image;
-
- _imgFromCamera() async {
-  // ignore: deprecated_member_use
-  File image = await ImagePicker.pickImage(
-    source: ImageSource.camera, imageQuality: 50
-  );
-
-  setState(() {
-    _image = image;
-  });
-}
-
-_imgFromGallery() async {
-  // ignore: deprecated_member_use
-  File image = await  ImagePicker.pickImage(
-      source: ImageSource.gallery, imageQuality: 50
-  );
-
-  setState(() {
-    _image = image;
-  });
-}
-
-void _showPicker(context) {
-  showModalBottomSheet(
-      context: context,
-      builder: (BuildContext bc) {
-        return SafeArea(
-          child: Container(
-            child: new Wrap(
-              children: <Widget>[
-                new ListTile(
-                    leading: new Icon(Icons.photo_library),
-                    title: new Text('Photo Library'),
-                    onTap: () {
-                      _imgFromGallery();
-                      Navigator.of(context).pop();
-                    }),
-                new ListTile(
-                  leading: new Icon(Icons.photo_camera),
-                  title: new Text('Camera'),
-                  onTap: () {
-                    _imgFromCamera();
-                    Navigator.of(context).pop();
-                  },
-                ),
-              ],
-            ),
-          ),
-        );
-      }
-    );
-}
 
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-    appBar: AppBar(),
-    body: Column(
-      children: <Widget>[
-        SizedBox(
-          height: 32,
-        ),
-        Center(
-          child: GestureDetector(
-            onTap: () {
-              _showPicker(context);
-            },
-            child: CircleAvatar(
-              radius: 55,
-              backgroundColor: Color(0xffFDCF09),
-              child: _image != null
-                  ? ClipRRect(
-                      borderRadius: BorderRadius.circular(50),
-                      child: Image.file(
-                        _image,
-                        width: 100,
-                        height: 100,
-                        fit: BoxFit.fitHeight,
-                      ),
-                    )
-                  : Container(
-                      decoration: BoxDecoration(
-                          color: Colors.grey[200],
-                          borderRadius: BorderRadius.circular(50)),
-                      width: 100,
-                      height: 100,
-                      child: Icon(
-                        Icons.camera_alt,
-                        color: Colors.grey[800],
+    appBar: AppBar(
+         title:Text('Ubah Profil'),
+         backgroundColor: Colors.green[400],
+         centerTitle: true,
+         
+       ),
+    body:Column(
+        children: <Widget>[
+          Container(
+            margin: EdgeInsets.all(10),
+            child: Column(
+              children: <Widget>[
+                 Container(
+                    width: 500,
+                    height: 370,
+                    child: Card(
+                      margin: const EdgeInsets.all(5),
+                      elevation: 5,
+                      color: Colors.green[400],
+                      child: Padding(
+                        padding: const EdgeInsets.all(15.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: <Widget>[
+                            Icon(
+                              Icons.supervised_user_circle,
+                              color: Colors.green[800],
+                              size: 70,
+                            ),
+                            TextFormField(
+                              decoration: InputDecoration(
+                                hintText: 'Masukkan Nama',
+                                labelText: "username: ",
+                                labelStyle: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ),
+                            TextFormField(
+                              decoration: InputDecoration(
+                                 hintText: 'Masukkan Email',
+                                labelText: "Email: ", 
+                                labelStyle: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ),
+                            TextFormField(
+                              obscureText: true,
+                              decoration: InputDecoration(
+                                labelText: "Password: ",
+                                labelStyle: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ),
+                            Column(
+                              children: <Widget>[
+                                    Padding(
+                                    padding: const EdgeInsets.only(
+                                        top: 10,  right: 15.0),
+                                        child: Align(
+                                          alignment: Alignment.bottomRight,
+                                          child: RaisedButton(
+                                            onPressed: (){
+                                                Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => ProfilPage()));
+                                            },
+                                            shape: RoundedRectangleBorder(
+                                              borderRadius:BorderRadius.circular(80),
+                                            ),
+                                            padding: const EdgeInsets.all(0),
+                                            child: 
+                                            Ink(
+                                              decoration: BoxDecoration(
+                                                gradient: LinearGradient(
+                                                  colors: <Color>[
+                                                    Color(0xFF9CCC65),
+                                                    Color(0xFF558B2F)
+                                                  ],
+                                                ),
+                                                borderRadius: BorderRadius.all(
+                                                  Radius.circular(80.0),
+                                                ),
+                                              ),
+                                              child:Container(
+                                              constraints: const BoxConstraints(
+                                                minWidth: 150.0 ,
+                                                minHeight: 36.0,
+                                              ),
+                                              alignment: Alignment.center,
+                                              child:  Text(
+                                                "update",
+                                                textAlign: TextAlign.center,
+                                                style: TextStyle(
+                                                  color: Colors.white,
+                                                  fontWeight: FontWeight.bold,
+                                                ),
+                                                ),
+                                            ) 
+                                            ),
+                                          ),
+                                        ),
+                                  ),
+                              ],
+                            ), 
+                          ],
+                        ),
                       ),
                     ),
-            ),
+                  ),
+              ],
+            ) 
           ),
-        )
-      ],
-    ),
+        ],
+      ),
   );
 }
 }

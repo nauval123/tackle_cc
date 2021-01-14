@@ -11,10 +11,13 @@ class Loginpage extends StatelessWidget{
   );
  } 
 }
-
-class FormLogin extends StatelessWidget {
-
+class FormLogin extends StatefulWidget {
   @override
+  _FormLoginState createState() => _FormLoginState();
+}
+
+class _FormLoginState extends State<FormLogin> {
+   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Column(
@@ -74,7 +77,7 @@ class FormLogin extends StatelessWidget {
                                           alignment: Alignment.bottomRight,
                                           child: RaisedButton(
                                             onPressed: (){
-                                                Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => HomePage()));
+                                                Navigator.pushReplacement(context, MaterialPageRoute(builder: (BuildContext context) => HomePage()));
                                             },
                                             shape: RoundedRectangleBorder(
                                               borderRadius:BorderRadius.circular(80),
@@ -155,3 +158,4 @@ class FormLogin extends StatelessWidget {
     );
   }
 }
+

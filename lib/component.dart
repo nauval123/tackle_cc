@@ -41,11 +41,16 @@ class CardDetail extends StatelessWidget {
 
 // ignore: must_be_immutable
 class CardDetails extends StatelessWidget {
- String judul,tingkat;
+ String judul,tingkat,deskripsi;
+ int status;
+ int point;
 
-  CardDetails(String input,tingkat){
+  CardDetails(String input,tingkat,des, int stat,int poin){
     this.judul= input;
     this.tingkat=tingkat;
+    this.deskripsi=des;
+    this.status=stat;
+    this.point=poin;
   }
 
   @override
@@ -54,7 +59,7 @@ class CardDetails extends StatelessWidget {
     margin: EdgeInsets.all(5),
     elevation: 5,
     child: ListTile(
-      leading: Icon(Icons.accessibility_new_rounded,color: Colors.green,),
+      leading: Icon(Icons.accessibility_new_rounded,color: this.status== 1 ? Colors.green:Colors.grey),
       title: Text(
         judul,
         style: TextStyle(fontSize: 12,
@@ -64,7 +69,7 @@ class CardDetails extends StatelessWidget {
       trailing: Container(
         child: FlatButton.icon( 
           onPressed: (){
-            Navigator.push(context, MaterialPageRoute(builder:(BuildContext context) =>DetailmissionsPage(tingkat:this.tingkat, judul:this.judul)));
+            Navigator.push(context, MaterialPageRoute(builder:(BuildContext context) =>DetailmissionsPage(tingkat:this.tingkat, judul:this.judul,deskripsi: this.deskripsi,point: this.point,status: this.status,)));
           }, 
           icon: Icon(Icons.arrow_forward_ios_rounded,color: Colors.green,),
            label: Text('detail',style: TextStyle(color: Colors.green),),
